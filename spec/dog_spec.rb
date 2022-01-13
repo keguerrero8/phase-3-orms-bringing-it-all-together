@@ -125,8 +125,10 @@ describe Dog do
     it 'returns a new dog object by id' do
       Dog.create(name: "Kevin", breed: "shepard")
       Dog.create(name: "Dave", breed: "poodle")
+      binding.pry
 
       dog_from_db = Dog.find(2)
+    
 
       expect(dog_from_db).to have_attributes(
         class: Dog,
